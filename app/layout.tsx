@@ -4,6 +4,7 @@ import { GeistSans } from 'geist/font/sans'
 import { GeistMono } from 'geist/font/mono'
 import { Navbar } from './components/nav'
 import Footer from './components/footer'
+import { BackgroundBeams } from './components/ui/background-beams'
 import { baseUrl } from './sitemap'
 
 export const metadata: Metadata = {
@@ -49,12 +50,23 @@ export default function RootLayout({
         GeistMono.variable
       )}
     >
-      <body className="antialiased max-w-xl mx-4 mt-8 lg:mx-auto">
-        <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0">
-          <Navbar />
-          {children}
-          <Footer />
-        </main>
+      <body className="antialiased">
+        <div
+          className="fixed inset-0 pointer-events-none"
+          style={{ zIndex: 0 }}
+        >
+          <BackgroundBeams />
+        </div>
+        <div
+          className="max-w-xl mx-4 mt-8 lg:mx-auto relative"
+          style={{ zIndex: 1 }}
+        >
+          <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0">
+            <Navbar />
+            {children}
+            <Footer />
+          </main>
+        </div>
       </body>
     </html>
   )

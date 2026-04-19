@@ -14,7 +14,6 @@ export default function Page() {
               fill
               sizes="60px"
               className="object-cover"
-              unoptimized
             />
           </div>
         </div>
