@@ -5,6 +5,10 @@
 /.pnp
 .pnp.js
 
+# agents
+AGENTS.md
+CLAUDE.md
+
 # testing
 /coverage
 
