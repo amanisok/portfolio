@@ -1,0 +1,16 @@
+[
+  {
+    "slug": "how-to-add-custom-domain-in-vercel",
+    "title": "How to add a custom domain in Vercel",
+    "summary": "A quick walkthrough for pointing your own domain at a Vercel-hosted project.",
+    "publishedAt": "2026-04-19",
+    "content": "## Why bother\n\nA custom domain makes your portfolio memorable and signals commitment. Here's how to wire one up in under five minutes.\n\n## Steps\n\n1. Open your project in the Vercel dashboard and go to **Settings → Domains**.\n2. Enter your domain (e.g. `yourname.com`) and click **Add**.\n3. Vercel shows the DNS records you need. Add them at your registrar:\n   - An `A` record pointing `@` to `76.76.21.21`\n   - A `CNAME` record pointing `www` to `cname.vercel-dns.com`\n4. Wait for propagation (usually a few minutes, up to 48 hours).\n5. Vercel auto-issues an SSL cert once DNS resolves.\n\n## Gotchas\n\n- If you use Cloudflare, set the records to **DNS only** (grey cloud) for the initial verification, then you can proxy later.\n- Apex domains need the `A` record — `CNAME` on the apex only works on registrars that support `CNAME flattening`."
+  },
+  {
+    "slug": "shipping-small-is-a-feature",
+    "title": "Shipping small is a feature",
+    "summary": "Why I cut scope aggressively on side projects — and what I learned from shipping a 200-line MVP.",
+    "publishedAt": "2026-04-10",
+    "content": "## The default is too big\n\nEvery side project I've abandoned had the same cause: I tried to ship v3 before v1.\n\nThe fix is to pick the **smallest possible artifact** that answers the question \"does anyone care?\" — and ship only that.\n\n## What small looks like\n\n- No auth on v1. A link is the auth.\n- No database until the JSON file genuinely breaks.\n- No settings page until two users ask for the same setting.\n\n## What this buys you\n\nShipping small gets you to the *feedback loop* fast. That loop — not the code — is the actual product."
+  }
+]
